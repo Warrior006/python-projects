@@ -1,8 +1,14 @@
 import random
 
 
-def play():
+def is_win(player, opponent):
+    # r > s , p > r, s > p
+    if (player == "r" and opponent == "s") or (player == "p" and opponent == "r") \
+            or (player == "s" and opponent == "p"):
+        return True
 
+
+def play():
     computer = random.choice(['r', 'p', 's'])
 
     while True:
@@ -21,10 +27,5 @@ def play():
 
     return "You lost!"
 
-def is_win(player, opponent):
-    # r > s , p > r, s > p
-    if (player == "r" and opponent == "s") or (player == "p" and opponent == "r") \
-        or (player == "s" and opponent == "p"):
-        return True
 
 print(play())
