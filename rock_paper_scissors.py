@@ -9,7 +9,8 @@ def is_win(player, opponent):
 
 
 def play():
-    computer = random.choice(['r', 'p', 's'])
+    possible = ['r', 'p', 's']
+    computer = random.choice(possible)
 
     while True:
         user = input("Please choose 'r' for rock, 'p' for paper, and 's' for scissors\n")
@@ -19,7 +20,7 @@ def play():
     print(f"You chose {user}, and the computer chose {computer}.")
 
     if user == computer:
-        return "It is a tie!"
+        return f"Both players selected {user}. It's a tie!"
 
     # r > s , p > r, s > p
     if is_win(user, computer):
