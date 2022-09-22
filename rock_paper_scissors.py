@@ -13,7 +13,7 @@ def play():
     computer = random.choice(possible)
 
     while True:
-        user = input("Please choose 'r' for rock, 'p' for paper, and 's' for scissors\n")
+        user = input("Please choose 'r' for rock, 'p' for paper, and 's' for scissors\n").lower()
         if (user == 'r') or (user == 'p') or (user == 's'):
             break
 
